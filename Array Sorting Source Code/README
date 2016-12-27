@@ -1,0 +1,25 @@
+Array Sorting Algorithms by Kevin Weiyi Zhang
+
+This program sorts an array using various sorting algorithms
+This was created to demonstrate my understanding of these algorithms
+
+Use the following commands to run the program:
+Type in 'newRandomArray' and press enter to generate an unsorted array of ints
+Type in 'print' and press enter to print the array
+Type in 'selectionSort' OR 'insertionSort' OR 'mergeSort' and press enter to sort the array
+Type in 'quit' and press enter to quit the program
+
+example list of commands:
+newRandomArray
+print
+selectionSort
+print
+newRandomArray
+print
+insertionSort
+print
+newRandomArray
+print
+mergeSort
+print
+quit
