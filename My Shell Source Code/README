@@ -2,4 +2,4 @@ This folder contains the different files I used to create my own working shell f
 
 When run, this program works pretty much like C Shell. It can take inputs and run commands the same way C Shell executes commands.
 
-NOTE: Not all features I intended to implement were implemented. However everything works smoothly and nearly all commands can be executed successfully.
+NOTE: Not all features I intended to implement were implemented. Some commands that exist in C shell have not been implemented. However everything works smoothly and all implemented commands can be executed successfully.
