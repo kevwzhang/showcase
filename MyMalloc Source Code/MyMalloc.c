@@ -1,14 +1,7 @@
 /*
- * CS252: MyMalloc Project
+ * MyMalloc Project
  *
- * The current implementation gets memory from the OS
- * every time memory is requested and never frees memory.
- *
- * You will implement the allocator as indicated in the handout,
- * as well as the deallocator.
- *
- * You will also need to add the necessary locking mechanisms to
- * support multi-threaded programs.
+ * Allocates blocks of memory and frees blocks of memory
  */
 
 #include <stdlib.h>
@@ -87,8 +80,7 @@ void initialize()
 }
 
 /* 
- * TODO: In allocateObject you will handle retrieving new memory for the malloc
- * request. The current implementation simply pulls from the OS for every
+ * Handles retrieving new memory for the malloc
  * request.
  *
  * @param: amount of memory requested
@@ -104,7 +96,6 @@ void * allocateObject(size_t size)
      * multiple of 8 bytes for alignment.
      */
     size_t real_size = (size + sizeof(ObjectHeader) + 7) & ~7;
-	//^^ steps 1 and 2 already complete ^^
 
 	//Traverse free list from beginning and find 1st block big enough
 	ObjectHeader *o = _freeList->_listNext;
@@ -179,24 +170,10 @@ void * allocateObject(size_t size)
 
 	// Return a pointer to useable memory
 	return _mem;
-
-/*
-    // Naively get memory from the OS every time
-    void *_mem = getMemoryFromOS(arenaSize); 
-
-    // Store the size in the header
-    ObjectHeader *o = (ObjectHeader *)_mem;
-    o->_objectSize = roundedSize;
-
-    pthread_mutex_unlock(&mutex);
-
-    // Return a pointer to useable memory
-    return (void *)((char *)o + sizeof(ObjectHeader));
-*/
 }
 
 /* 
- * TODO: In freeObject you will implement returning memory back to the free
+ * Implement returning memory back to the free
  * list, and coalescing the block with surrounding free blocks if possible.
  *
  * @param: pointer to the beginning of the block to be returned
