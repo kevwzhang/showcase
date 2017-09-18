@@ -1,1 +1,6 @@
-Contains the source code of a program that allocates memory
+This is the source code of a project I completed in one of my classes.
+
+This program is a memory allocator. The program allocates blocks of memory and frees the blocks when they are no longer needed.
+The program uses linked lists and arrays to manage the different blocks of memory.
+
+This malloc implementation is similar to that of the implementation that C uses.
