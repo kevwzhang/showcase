@@ -1,9 +1,7 @@
 
 /*
  *
- * CS-252 Fall 2013
  * shell.l: lexical analyzer for shell
- * You have to extend it.
  *
  */
 
@@ -12,9 +10,6 @@
 #include <string.h>
 #include <unistd.h>
 #include "y.tab.h"
-
-
-/////// START ADDED CODE ///////
 
 extern "C" char * read_line();
 
@@ -42,8 +37,6 @@ int mygetc(FILE * f) {
 
 #undef getc
 #define getc(f) mygetc(f)
-
-/////// END ADDED CODE ///////
 
 static  void yyunput (int c,char *buf_ptr  );
 
