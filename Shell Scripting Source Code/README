@@ -1,0 +1,4 @@
+This folder contains some examples of shell scripts I've written.
+
+The pwcheck.sh script is a script that takes a password as input and outputs a score that determines how secure your password is.
+The backup.sh script takes a file in as an input and periodically stores a backup copy of the file every time the file has been changed or edited.
